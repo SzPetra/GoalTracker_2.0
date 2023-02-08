@@ -34,9 +34,9 @@ public class GoalController {
         goalService.deleteGoalById(id);
     }
 
-    @PatchMapping
+    @PatchMapping("{id}")
     @ResponseBody
-    public void getGoalById(@RequestBody GoalModel goal) {
-        goalService.addNewGoal(goal);
+    public void updateExistingGoal(@PathVariable("id") int oldId,@RequestBody GoalModel updatedGoal) {
+        goalService.updateExistingGoal(oldId, updatedGoal);
     }
 }
