@@ -21,6 +21,7 @@ public class GoalModel {
 
     private String title;
     private String description;
+    @Column(columnDefinition = "DATE")
     private LocalDate date;
 
     @OneToMany(cascade = CascadeType.ALL)
