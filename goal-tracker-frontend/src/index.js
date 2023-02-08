@@ -6,6 +6,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MyGoalsPage from './pages/myGoalsPage/MyGoalsPage';
 import CommonGoalsPage from './pages/commonGoalsPage/CommonGoalsPage';
+import UserProfilePage from './pages/userProfilePage/UserProfilePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<Navbar />}> 
           <Route path="/mygoals" element={<MyGoalsPage/>} />
           <Route path="/goals" element={<CommonGoalsPage/>} />
+          <Route path="/myprofile" element={<UserProfilePage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
