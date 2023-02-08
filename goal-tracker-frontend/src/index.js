@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import Navbar from './uiKit/components/Navbar';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MyGoalsPage from './pages/myGoalsPage/MyGoalsPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +12,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar />}> 
-
+          <Route path="/mygoals" element={<MyGoalsPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
