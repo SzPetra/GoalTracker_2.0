@@ -17,7 +17,6 @@
     font-weight: bold;
     font-size: large;
     color: var(--mainblack);
-    border: 1px solid var(--mainblack)
 }
 .nav-link:visited{
     text-decoration: none;
