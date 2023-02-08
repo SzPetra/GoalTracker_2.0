@@ -32,8 +32,7 @@ public class GoalService {
         goalRepository.save(goal);
     }
 
-    public GoalModel getGoalById (int id) {
-        return goalRepository.findById(id)
-                .orElse(null);
+    public void getGoalById (int id) {
+        goalRepository.findById(id);
     }
 }
