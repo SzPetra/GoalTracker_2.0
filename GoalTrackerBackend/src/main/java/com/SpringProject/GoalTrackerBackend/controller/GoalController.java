@@ -28,4 +28,15 @@ public class GoalController {
     public void addNewGoal(@RequestBody GoalModel goal) {
         goalService.addNewGoal(goal);
     }
+
+    @DeleteMapping(value = "{id}")
+    public void deleteGoalById(@PathVariable int id) {
+        goalService.deleteGoalById(id);
+    }
+
+    @PatchMapping
+    @ResponseBody
+    public void getGoalById(@RequestBody GoalModel goal) {
+        goalService.addNewGoal(goal);
+    }
 }
