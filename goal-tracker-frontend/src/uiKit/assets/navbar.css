@@ -1,0 +1,25 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+
+    background-color: var(--navbarcolor);
+    
+    padding-left: 10%;
+}
+
+/* links in navigation bar */
+.nav-link {
+    padding-left: 6%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: var(--mainblack);
+    border: 1px solid var(--mainblack)
+}
+.nav-link:visited{
+    text-decoration: none;
+    color: var(--mainblack)
+}
