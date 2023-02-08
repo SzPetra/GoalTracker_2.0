@@ -27,11 +27,7 @@ public class GoalService {
     public void deleteGoalById(int goalId) {
         goalRepository.deleteById(goalId);
     }
-
-    public void updateExistingGoal(GoalModel goal) {
-        goalRepository.save(goal);
-    }
-
+    
     public void updateExistingGoal (int oldId, GoalModel updatedGoal) {
         updatedGoal.setId(oldId);
         goalRepository.save(updatedGoal);
