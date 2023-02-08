@@ -32,7 +32,8 @@ public class GoalService {
         goalRepository.save(goal);
     }
 
-    public void getGoalById (int id) {
-        goalRepository.findById(id);
+    public void updateExistingGoal (int oldId, GoalModel updatedGoal) {
+        updatedGoal.setId(oldId);
+        goalRepository.save(updatedGoal);
     }
 }
