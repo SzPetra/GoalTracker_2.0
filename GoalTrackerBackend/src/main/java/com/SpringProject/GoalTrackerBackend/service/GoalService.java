@@ -29,7 +29,18 @@ public class GoalService {
     }
     
     public void updateExistingGoal (int oldId, GoalModel updatedGoal) {
-        updatedGoal.setId(oldId);
-        goalRepository.save(updatedGoal);
+        GoalModel existingGoal = goalRepository.findById(oldId)
+                .orElse(null);
+
+        //updating the title if not null
+        if(updatedGoal.getTitle() != null){
+            existingGoal.setTitle(updatedGoal.getTitle());
+        }
+        //updating the description if not null
+        if(updatedGoal.getDescription() != null) {
+            existingGoal.setDescription(updatedGoal.getDescription());
+        }
+        
+        goalRepository.save(existingGoal);
     }
 }
