@@ -5,6 +5,7 @@ import Navbar from './uiKit/components/Navbar';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MyGoalsPage from './pages/myGoalsPage/MyGoalsPage';
+import CommonGoalsPage from './pages/commonGoalsPage/CommonGoalsPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Navbar />}> 
           <Route path="/mygoals" element={<MyGoalsPage/>} />
+          <Route path="/goals" element={<CommonGoalsPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
