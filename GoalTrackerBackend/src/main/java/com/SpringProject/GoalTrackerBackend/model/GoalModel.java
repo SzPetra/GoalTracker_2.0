@@ -1,12 +1,10 @@
 package com.SpringProject.GoalTrackerBackend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -22,6 +20,9 @@ public class GoalModel {
 
     private String title;
     private String description;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<ActionModel> actions;
     private boolean isPrivate;
 
 }
