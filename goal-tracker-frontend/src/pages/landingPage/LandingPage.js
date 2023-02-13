@@ -26,7 +26,7 @@ const LandingPage = () => {
 	}, []);
 
     return (
-        <p>this is the landing page</p>
+        <p>this is the landing page {punchline}</p>
     )
 }
 
