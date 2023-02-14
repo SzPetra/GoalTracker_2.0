@@ -27,8 +27,8 @@ public class GoalModel {
     @OneToMany(cascade = CascadeType.ALL)
     private List<ActionModel> actions;
 
-    @Column(columnDefinition = "boolean default true")
-    private boolean personal;
+    @Column(columnDefinition = "boolean default false")
+    private boolean availableToPublic;
 
     @PrePersist
     void atPersist() {
