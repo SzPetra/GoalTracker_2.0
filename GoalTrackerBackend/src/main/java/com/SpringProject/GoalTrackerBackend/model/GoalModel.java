@@ -22,13 +22,16 @@ public class GoalModel {
 
     private String title;
     private String description;
-    @Column(columnDefinition = "DATE")
-    @DateTimeFormat
-    @GeneratedValue
     private LocalDate date;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<ActionModel> actions;
-    private boolean isPrivate;
 
+    @Column(columnDefinition = "boolean default true")
+    private boolean personal;
+
+    @PrePersist
+    void atPersist() {
+        date = LocalDate.now();
+    }
 }

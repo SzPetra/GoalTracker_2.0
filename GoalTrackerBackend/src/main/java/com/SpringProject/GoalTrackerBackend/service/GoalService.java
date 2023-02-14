@@ -17,7 +17,8 @@ public class GoalService {
     }
 
     public List<GoalModel> getAllGoals() {
-        return goalRepository.findAll();
+        List<GoalModel> goals = goalRepository.findAll();
+        return goals;
     }
 
     public void addNewGoal(GoalModel goal) {
